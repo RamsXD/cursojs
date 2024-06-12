@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacionalidade</title>
+  </head>
+  <body>
+    <h1>Nacionalidade</h1>
+    Onde voce nasceu? <input id="pais" type="text" />
+    <input id="clic" type="button" value="clicar" onclick="descobrir()" />
+    <div id="nac"></div>
+
+    <script>
+      function descobrir() {
+        var pais = document.getElementById("pais").value
+
+        if (pais == "Brasil") {
+          nac.innerHTML = 'Você <strong>É</strong> brasileiro'
+        } else {
+          nac.innerHTML = 'Você <strong>NÃO</strong> brasileiro'
+        }
+      }
+    </script>
+  </body>
+</html>
