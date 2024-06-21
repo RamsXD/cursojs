@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="bv()">Clique aqui</button>
+    <script>
+        function bv(){
+        var nome = prompt('Qual é o seu nome?');
+        
+        if (nome && nome.trim()) {
+        var idade = prompt(`Olá ${nome}! Quantos anos você tem?`);
+        if (idade && idade.trim()) {
+            alert(`Acabei de conhecer ${nome}, que tem ${idade} anos de idade`);
+        } else {
+            alert('[ERRO] Digite sua idade!');
+        }
+        } else {
+        alert('[ERRO] Digite seu nome!');
+        }
+    }
+    </script>
+</body>
+</html>
