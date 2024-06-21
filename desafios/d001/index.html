@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mensagens</title>
+    <style>
+      body {
+        justify-content: flex-end;
+      }
+      button {
+        width: 150px;
+        height: 80px;
+      }
+      button:hover {
+        background-color: rgb(223, 223, 223);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Desafio das Mensagens</h1>
+
+    <button id="bt1" class="bt" onclick="b1()">Botão 1</button>
+    <button id="bt2" class="bt" onclick="b2()">Botão 2</button>
+    <button id="bt3" class="bt" onclick="b3()">Botão 3</button>
+
+    <script>
+      function b1() {
+        alert("Você clicou no primeiro botão!");
+        bt1.style.background = "gray";
+        bt2.style.background = "";
+        bt3.style.background = "";
+      }
+      function b2() {
+        alert("Você clicou no segundo botão!");
+        bt1.style.background = "";
+        bt2.style.background = "gray";
+        bt3.style.background = "";
+      }
+      function b3() {
+        alert("Você clicou no terceiro botão!");
+        bt1.style.background = "";
+        bt2.style.background = "";
+        bt3.style.background = "gray";
+      }
+    </script>
+  </body>
+</html>
