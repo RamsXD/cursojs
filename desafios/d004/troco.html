@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      input {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculando o Troco</h1>
+
+    <input type="button" value="Comprar produto" onclick="comprar()" />
+
+    <script>
+      function comprar() {
+        let pro = prompt("Qual produto você está comprando?");
+        if (pro.trim()) {
+          let pre = prompt(`Quanto custa ${pro} que você está comprando?`);
+          if (pre.trim() && !isNaN(pre)) {
+            let valor = prompt(
+              `Qual foi o valor que você deu para pagar ${pro}?`
+            );
+            if (valor.trim() && !isNaN(valor)) {
+              alert(`Você comprou ${pro} que custou R$ ${pre},00.
+Deu R$ ${valor},00 em dinheiro e vai receber R$ ${pre - valor},00 de troco.
+Volte sempre!`);
+            }
+          }
+        } else {
+          alert("error");
+        }
+      }
+    </script>
+  </body>
 </html>
