@@ -1,0 +1,10 @@
+{
+  "json.format.enable": true,
+  "json.schemas": [
+
+  ],
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.quickSuggestions": {
+    "other": "off"
+  }
+}
