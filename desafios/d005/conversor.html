@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de medidas</title>
+    <style>
+        button {
+            width:150px;
+            height: 50px;            
+}   
+        p#m {
+            font-size: 1.1em;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Conversor de Medidas</h1>
+
+    <button onclick="converter()">Converter</button>
+
+    <h2 id="p">Clique no botão para iniciar.</h2>
+
+    <p id="m"></p>
+    
+    <script>
+        function converter() {
+            let met = prompt ('Digite uma distância em metros (m)')
+            if (met.trim() && !isNaN(met)) {
+            p.innerHTML = (`A distância de ${met} metros, corresponde a ...`)
+
+            m.innerHTML = (`${met*1000} quilômetros (Km) <br>
+            ${met*100} hectômetros (Hm) <br>
+            ${met*10} decâmetros (Dam) <br>
+            ${met/10} decímetros (dm) <br>
+            ${met/100} centímetros (cm) <br>
+            ${met/1000} milímetros (mm)`)
+            
+            
+            }else {
+                alert('[ERRO] Digite um número')
+            }
+        }
+    </script>
+    
+</body>
+</html>
