@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de temperaturas</title>
+    <style>
+      button {
+        width: 150px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Conversor de Temperaturas</h1>
+    
+
+    <button onclick="converter()">Converter</button>
+
+    <h2 id="p">Clique no botão para iniciar.</h2>
+    
+    <h3 id="p1"></h3>
+    <h3 id="p2"></h3>
+
+
+    <script>
+      function converter() {
+        let temp = prompt("Digite uma temperatura em °C (Celsius)");
+        if (temp.trim() && !isNaN(temp)) {
+            p.innerHTML = `<strong>A temperatura de ${temp}°C, corresponde a...</strong>`;
+            p1.innerHTML = `${temp + 273,15}°K (Kelvin)`
+            p2.innerHTML = `${temp * 1,8 + 32}°F (Fahrenheit)`
+        } else {
+            alert("[ERRO], digite um número!");
+        }
+      }
+    </script>
+  </body>
+</html>
