@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor R$ -> US$</title>
+    <style>
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conversor R$ -> US$</h1>
+
+    <button onclick="converter()">Converter</button>
+
+    <p id="p">Clique no botão acima para iniciar.</p>
+    
+
+    <script>
+        function converter() {
+            let dol = prompt('Antes de mais nada. Quanto está a cotação do dólar agora?')
+            if (dol.trim() && !isNaN(dol)) {
+                let real= prompt('Quantos R$ você tem na carteira?')
+                if ( real.trim() && !isNaN(real)) {
+                    p.innerHTML = (`Você consegue comprar US$${real / dol}.`)
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

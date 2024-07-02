@@ -5,6 +5,6 @@
   ],
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.quickSuggestions": {
-    "other": "off"
+    "other": "on"
   }
 }
