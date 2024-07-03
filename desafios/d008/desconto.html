@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Desconto</title>
+    <style> body {
+        font-size: 1.2em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calcular Desconto</h1>
+    <button onclick="calcular()">Desconto de 10%</button>
+    <h3 id="calc"></h3>
+    <p id="p">Clique no botão acima para iniciar</p>
+
+
+    <script>
+        function calcular() {
+            let prod = prompt('Qual é o produto que você está comprando?')
+            if (prod.trim()) {                
+                let prec = prompt(`Qual é o preço de ${prod}?`)
+                let percent = 0.10 * prec
+                let total = prec - percent
+                if (prec.trim() && !isNaN(prec)) {
+                calc.innerHTML = (`Calculando desconto de 10% para ${prod}`)
+                p.innerHTML = (`O preço original era R$ ${prec}. <br> Você acaba de ganhar R$ ${percent} de desconto (-10%). <br> No fim, você vai pagar R$ ${total} no produto ${prod}`)
+            } 
+        } 
+    }
+    </script>
+    
+</body>
+</html>
