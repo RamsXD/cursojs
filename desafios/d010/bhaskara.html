@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcular()">Calcular</button>
+    <h2 id="maior"></h2>
+    <p id="menor">Considerando uma equação no formato <strong>ax² + bx + c</strong> = 0, aperte o botão acima para calcular o valor de &Delta;.</p>
+    
+
+    <script>
+        function calcular() {
+            let a = prompt('Qual o valor de a?')
+            if (a.trim() && !isNaN(a)){
+                let b = prompt('Qual é o valor de b')
+                if (b.trim() && !isNaN(b)){
+                    let c = prompt('Qual é o valor de c?')
+                    if (c.trim() && !isNaN(c)){
+                        maior.innerHTML = (`Resolvendo Bhaskara`)
+                        menor.innerHTML = (`A equação atual é <strong>${a}x² + ${b}x + ${c} = 0</strong> <br />
+                            O cálculo realizado será <strong>Δ = ${b}² - 4 . ${a} . ${c}</strong> <br />
+                            O valor calculado foi <strong>Δ = ${b**2 - 4 * a * c}</strong>`)
+                    }else {
+                       alert('Digite um número válido para c.')
+                    }
+                }else {
+                   alert('Digite um número válido para b.')
+                }
+        }else {
+                alert('Digite um número válido para a.')
+            }
+        }
+    </script>
+</body>
+</html>

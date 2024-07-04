@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajustar salário</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reajuste salarial</h1>
+    <button onclick="reajustar()">Reajustar Salário</button>
+    <h2 id="grande"></h2>
+    <p id="pequeno">Clique no botão acima para iniciar.</p>
+
+    <script>
+        function reajustar() {
+            let nome = prompt ('Qual é o nome do funcionário?')
+            if (nome.trim() && isNaN(nome)) {
+                let salario = prompt (`Qual é o salário de ${nome}?`)
+                if (salario.trim() && !isNaN(salario)) {
+                    let reajuste = prompt(`O salário de ${nome} vai ser em qual porcentagem?`)
+                    if (reajuste.trim() && !isNaN(reajuste)) {
+                        grande.innerHTML = (`${nome} recebeu um aumento salarial!`)
+                        pequeno.innerHTML = (`O salário atual era de R$ ${salario}. <br> Com um aumento de ${reajuste}%, o salário vai aumentar R$ ${salario * (reajuste / 100)} no próximo mês. <br> E a partir dai, ${nome} vai passar a ganhar R$ ${parseInt(salario) + parseInt(salario) * (reajuste / 100)}.`)
+                    } else {
+                        alert('[ERRO] Digite um percentual de reajuste válido.')
+                    }
+                } else {
+                    alert('[ERRO] Digite um salário válido.')
+                }
+            } else {
+                alert('[ERRO] Digite um nome válido.')
+            }
+        }
+    </script>
+    
+</body>
+</html>
