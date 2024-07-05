@@ -1,29 +1,5 @@
-let num = document.getElementById('fnum')
-let lista = document.getElementById('flista')
+let num = document.getElementById('numero')
+let lista = document.getElementById('lista')
 let res = document.getElementById('res')
 let valores = []
 
-function isNumero(n) {
-    if(Number(n) >= 1 && Number(n) <= 100) {
-        return true
-    }else {
-        return false
-    }
-}
-
-function lista(n, l) {
-    if (l.indexOf(Number(n)) != -1) {
-        return true
-    }else {
-        return false
-    }
-}
-
-
-function adicionar() {
-    if(isNumero(num.value) && !lista(num.value)) {
-        alert('tudo ok')
-    }else {
-        alert ('erro')
-    }
-}

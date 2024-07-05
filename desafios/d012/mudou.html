@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preço mudou</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preço mudou</h1>
+    <button onclick="verificar()">Verificar</button>
+    <h2 id="maior"></h2>
+    <p id="menor">Clique no botão acima para analisar a mudança de preço.</p>
+    
+
+    <script>
+        function verificar() {
+            let pantes = prompt ('Qual era o preço anterior do produto?')
+            if (pantes.trim() && !isNaN(pantes)) {
+                let patual = prompt(' Qual é o preço atual do produto?')
+                if (patual.trim() &&!isNaN(patual)) {
+                    maior.innerHTML = ('Analisando os valores informados')
+                    menor.innerHTML = (`O produto custava R$ ${pantes},00 e agora custa R$ ${patual},00. <br />
+                    Hoje o produto `)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

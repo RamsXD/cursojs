@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body {
+            font-size: 1.2em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="verificar()">Verificar</button>
+    <h2 id="maior"></h2>
+
+    <p id="menor">Informe um ano para saber se ele é bissexto</p>
+    
+
+    <script>
+        function verificar() {
+        let ano = prompt('Qual é o ano que você quer verificar?')
+            function bissexto (ano) {
+            return (ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)
+        }
+        if (bissexto(ano) && ano.trim() && !isNaN(ano)) {
+            maior.innerHTML = (`Analisando o ano de ${ano}...`)
+            menor.innerHTML = (`O ano de ${ano} <strong>É BISSEXTO</strong> ✅`)
+        }else if (!bissexto(ano) && ano.trim() && !isNaN(ano)){
+            maior.innerHTML = (`Analisando o ano de ${ano}...`)
+            menor.innerHTML = (`O ano de ${ano} <strong>NÃO É BISSEXTO ❌</strong>`)
+        } else {
+            alert("Digite um ano válido")
+        }
+
+    }
+    </script>
+</body>
+</html>
