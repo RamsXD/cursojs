@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preço mudou</title>
+    <link rel="stylesheet" href="javascript.js">
     <style>
         body {
             font-size: 1.2em;
@@ -21,19 +22,6 @@
     <h2 id="maior"></h2>
     <p id="menor">Clique no botão acima para analisar a mudança de preço.</p>
     
-
-    <script>
-        function verificar() {
-            let pantes = prompt ('Qual era o preço anterior do produto?')
-            if (pantes.trim() && !isNaN(pantes)) {
-                let patual = prompt(' Qual é o preço atual do produto?')
-                if (patual.trim() &&!isNaN(patual)) {
-                    maior.innerHTML = ('Analisando os valores informados')
-                    menor.innerHTML = (`O produto custava R$ ${pantes},00 e agora custa R$ ${patual},00. <br />
-                    Hoje o produto `)
-                }
-            }
-        }
-    </script>
 </body>
+
 </html>
